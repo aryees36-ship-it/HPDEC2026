@@ -60,7 +60,7 @@ body{
 
 <h3>Health Promotion Division</h3>
 
-<h5>Evidence Summit Registration</h5>
+<h5> SBC Evidence Summit Registration</h5>
 
 </div>
 
@@ -187,7 +187,21 @@ id="email"
 placeholder="Email Address"
 required>
 
-<h5 class="mt-4 mb-3">Payment Information</h5>
+<h5 class="mt-4 mb-3">Category of Participant</h5>
+
+<select
+    class="form-select"
+    id="categoryofParticipant"
+    name="categoryofParticipant"
+    required>
+
+    <option value="">Select Category</option>
+    <option value="Health Professional">Health Professional</option>
+    <option value="Partner">Partner</option>
+    <option value="CSO">CSO</option>
+    <option value="Student">Student</option>
+
+</select>
 
 <select
 class="form-select"
@@ -196,9 +210,9 @@ required>
 
 <option value="">Payment Completed?</option>
 
-<option value="Yes">Yes</option>
+<option value="I have Paid">I have Paid</option>
 
-<option value="No">No</option>
+<option value="I havenot Paid">I havenot Paid</option>
 
 </select>
 
@@ -314,6 +328,11 @@ District:
 
 </p>
 
+<p>
+Category of Participant:
+<b id="s_categoryofParticipant"></b>
+</p>
+
 <h4
 class="text-success"
 id="successText">
@@ -326,17 +345,21 @@ width="180">
 
 </div>
 
+
 <div class="modal-footer">
 
-<button
+<button 
+type="button"
 class="btn btn-success"
 onclick="downloadSlip()">
 
-Download Slip
+Download Registration Slip
 
 </button>
 
+
 <button
+type="button"
 class="btn btn-secondary"
 data-bs-dismiss="modal">
 
@@ -344,11 +367,6 @@ Close
 
 </button>
 
-</div>
-
-</div>
-
-</div>
 
 </div>
 
